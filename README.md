@@ -12,6 +12,8 @@ Add `cuba.performanceTestMode = true` to the web-app.properties file to disable 
 #### Firefox configuration
 Need to set `network.proxy.allow_hijacking_localhost` to `true` in Firefox `about:config` in order to proxy localhost (it’s false by default)
 
+![](/img/6cb666d4368f7a83af5509c7aca78aabee8518af.png)
+
 #### JMeter scenario
 ##### Adding Elements to Test Plan
 Add “Thread Group” to “Test Plan”:
@@ -77,7 +79,7 @@ shows info about all recorded requests when they are played.
 ```
 Recording Controller -> Add -> Listener -> View Results Tree
 ```
-So, the final scenario tree is the following:
+So, the final scenario tree should look like the following:
 
 ![](/img/cbb6b094730b0e36feb3f3c576d737eae49df7c8.png)
 
@@ -92,7 +94,7 @@ Configure Firefox to use localhost on port 9090 (like in HTTP(S) Test Script Rec
 * Check “Use this proxy server for all protocols” option
 * Check that localhost and 127.0.0.1 NOT in “No Proxy for” list, otherwise remove them
 
-![](/img/bf4dc75af9ece05c4cebfcc12357642690de163a.png)
+![](/img/8a39212d8d3dd000c0e4d1e15bab12a068e2f63c.png)
 
 * Click OK and exit from the menu
 * Restart Firefox
@@ -103,6 +105,7 @@ Our test will do 3 simple steps:
 1. Login to the application.
 2. Open “Users” screen.
 3. Logout.
+
 To record request do the following steps:
 * In the “HTTP(S) Test Script Recorder” click “Start” button. We will see the information dialog: “Root CA certificate ApacheJMeterTemporaryRootCA created in bin directory”. Click the OK button.
 * In Firefox open [http://localhost:8080/app](). We can see that some requests have already saved in “Recording Controller”.
@@ -128,5 +131,9 @@ Play our recorded requests to test it. Click “Start” button on the top butto
 The dialog will appear. It will ask you to save the test plan. Save it with the name “cuba-app-test-scenario”.
 
 In the tomcat’s log, we can see that the admin user ‘logged in’ and ‘logged out’. “View result tree” shows info about request and response.
+
+![](/img/5bf080aba6d3457e561d9c6058cb77a03a4b4528.png)
+
+You can review responses in the results tree as shown on the picture:
 
 ![](/img/2ff5aa5059349733794034260eafb73e05215d2f.png)
