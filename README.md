@@ -120,7 +120,7 @@ To record request do the following steps:
 * Logout.
 * Stop recording.
 
-You can find the resulting scenario [here](/scenario/cuba-app-test-scenario.jmx).
+You can find the example of the scenario [here](/scenario/cuba-app-test-scenario.jmx).
 
 Now we can delete unnecessary requests, for instance, `app/Push`. After that, the scenario looks as follows:
 
