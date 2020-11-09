@@ -2,16 +2,15 @@
 
 For the performance testing of CUBA-based web application we use the following tools:
 
-[Apache JMeter]()
+[Apache JMeter](https://jmeter.apache.org/)
 
-[Mozilla Firefox]() 
+[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/) 
 
 #### Application configuration 
 Add `cuba.performanceTestMode = true` to the web-app.properties file to disable “CSRF” security.
 
 #### Firefox configuration
-Need to set `network.proxy.allow_hijacking_localhost` to `true` in Firefox [about:config](about:config) 
-in order to proxy localhost (it’s false by default)
+Need to set `network.proxy.allow_hijacking_localhost` to `true` in Firefox `about:config` in order to proxy localhost (it’s false by default)
 
 #### JMeter scenario
 ##### Adding Elements to Test Plan
